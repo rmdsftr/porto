@@ -21,7 +21,7 @@ export const projects: Project[] = [
     detail: {
       appName: 'ENVIROO',
       overview:
-        'A waste bank management system consisting of a Flutter mobile app, a React web application, and a Go backend, supporting two-tier (BSM–Customer) and three-tier (BSI–BSU–Customer) operational models. Piloted across 6 waste banks in Padang and funded by Andalas University.',
+        'A waste bank management system consisting of a Flutter mobile app, a React web application, and a Go backend, supporting two-tier (BSM–Customer) and three-tier (BSI–BSU–Customer) operational models. Piloted across several waste banks in Padang and funded by Andalas University.',
       repos: [
         {
           name: 'enviroo-backend',
