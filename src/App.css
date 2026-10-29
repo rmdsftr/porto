@@ -2,11 +2,11 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 11px 22px;
+  padding: 10px 20px;
   border: 1px solid transparent;
   border-radius: 999px;
   font: inherit;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 600;
   cursor: pointer;
   transition:
@@ -65,14 +65,14 @@
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
-  margin-top: 32px;
+  margin-top: 28px;
 }
 
 .socials {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-top: 28px;
+  margin-top: 24px;
 }
 
 .navbar {
@@ -94,7 +94,7 @@
 }
 
 .brand {
-  font-size: 19px;
+  font-size: 17px;
   font-weight: 800;
   color: var(--text-h);
 
@@ -111,7 +111,7 @@
     display: block;
     padding: 8px 12px;
     border-radius: 8px;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 500;
     transition:
       color 0.2s,
@@ -198,11 +198,11 @@ main {
     display: grid;
     grid-template-columns: 1fr auto;
     align-items: center;
-    gap: 56px;
+    gap: 48px;
   }
 
   h1 {
-    font-size: clamp(36px, 6vw, 60px);
+    font-size: clamp(32px, 5vw, 46px);
     font-weight: 800;
     letter-spacing: -0.03em;
   }
@@ -217,14 +217,14 @@ main {
 .hero-role {
   margin-top: 12px;
   color: var(--text-h);
-  font-size: clamp(18px, 2.4vw, 22px);
+  font-size: clamp(16px, 2vw, 19px);
   font-weight: 600;
 }
 
 .hero-tagline {
   max-width: 560px;
   margin-top: 16px;
-  font-size: 17px;
+  font-size: 16px;
 }
 
 .status-badge {
@@ -238,7 +238,7 @@ main {
   border-radius: 999px;
   background: var(--surface);
   color: var(--text-h);
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 600;
 
   a {
@@ -292,11 +292,11 @@ main {
   gap: 6px;
   margin-top: 16px;
   color: var(--muted);
-  font-size: 15px;
+  font-size: 14px;
 }
 
 .avatar {
-  width: 280px;
+  width: 240px;
   aspect-ratio: 1;
   border: 6px solid var(--surface);
   border-radius: 50%;
@@ -309,7 +309,7 @@ main {
 .avatar-fallback {
   display: grid;
   place-items: center;
-  font-size: 80px;
+  font-size: 64px;
   font-weight: 800;
   color: var(--light);
   background: linear-gradient(135deg, var(--mid), var(--dark));
@@ -317,7 +317,7 @@ main {
 
 @media (max-width: 768px) {
   .hero {
-    padding-block: 40px 56px;
+    padding-block: 32px 48px;
 
     .container {
       grid-template-columns: 1fr;
@@ -330,17 +330,17 @@ main {
   }
 
   .avatar {
-    width: 160px;
+    width: 140px;
   }
 
   .avatar-fallback {
-    font-size: 48px;
+    font-size: 40px;
   }
 }
 
 .section {
   --section-bg: var(--bg);
-  padding-block: 88px;
+  padding-block: 72px;
   background: var(--section-bg);
 }
 
@@ -349,12 +349,12 @@ main {
 }
 
 .section-head {
-  margin-bottom: 40px;
+  margin-bottom: 32px;
 }
 
 .section-eyebrow {
   color: var(--accent);
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -362,13 +362,13 @@ main {
 
 .section-title {
   margin-top: 8px;
-  font-size: clamp(28px, 4vw, 36px);
+  font-size: clamp(24px, 3.2vw, 30px);
   font-weight: 800;
 }
 
 @media (max-width: 768px) {
   .section {
-    padding-block: 64px;
+    padding-block: 56px;
   }
 }
 
@@ -380,7 +380,7 @@ main {
 
   h3 {
     margin-bottom: 16px;
-    font-size: 17px;
+    font-size: 16px;
   }
 }
 
@@ -395,7 +395,7 @@ main {
   border-radius: 999px;
   background: var(--accent-soft);
   color: var(--accent);
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 600;
 }
 
@@ -415,7 +415,7 @@ main {
 
 .exploring-label {
   color: var(--muted);
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -435,7 +435,7 @@ main {
 
 .journey-title {
   margin-bottom: 24px;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .timeline {
@@ -463,25 +463,25 @@ main {
 
 .timeline-period {
   color: var(--accent);
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 600;
 }
 
 .timeline-title {
   margin-top: 4px;
   color: var(--text-h);
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 700;
 }
 
 .timeline-place {
   color: var(--muted);
-  font-size: 15px;
+  font-size: 14px;
 }
 
 .timeline-desc {
   margin-top: 8px;
-  font-size: 15px;
+  font-size: 14px;
 }
 
 @media (max-width: 768px) {
@@ -517,11 +517,11 @@ main {
 
   h3 {
     margin-bottom: 0;
-    font-size: 19px;
+    font-size: 17px;
   }
 
   p {
-    font-size: 15px;
+    font-size: 14px;
   }
 }
 
@@ -529,7 +529,7 @@ main {
   align-self: flex-start;
   margin-top: auto;
   padding: 8px 16px;
-  font-size: 14px;
+  font-size: 13px;
 
   &[aria-disabled='true'] {
     cursor: not-allowed;
@@ -561,14 +561,14 @@ main {
 }
 
 .contact-text {
-  font-size: 17px;
+  font-size: 16px;
 }
 
 .footer {
   padding-block: 28px;
   border-top: 1px solid var(--border);
   color: var(--muted);
-  font-size: 14px;
+  font-size: 13px;
 
   .container {
     display: flex;
@@ -592,7 +592,7 @@ main {
 }
 
 .project-page {
-  padding-block: 40px 88px;
+  padding-block: 32px 72px;
 }
 
 .back-link {
@@ -600,7 +600,7 @@ main {
   align-items: center;
   gap: 6px;
   color: var(--muted);
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 500;
 
   &:hover {
@@ -613,7 +613,7 @@ main {
 
   h1 {
     margin-top: 8px;
-    font-size: clamp(30px, 5vw, 48px);
+    font-size: clamp(28px, 4vw, 38px);
     font-weight: 800;
     letter-spacing: -0.03em;
   }
@@ -629,7 +629,7 @@ main {
   border-radius: 999px;
   background: var(--surface);
   color: var(--muted);
-  font-size: 14px;
+  font-size: 13px;
 
   strong {
     color: var(--text-h);
@@ -639,15 +639,15 @@ main {
 .project-lead {
   max-width: 760px;
   margin-top: 20px;
-  font-size: 17px;
+  font-size: 16px;
 }
 
 .project-block {
-  margin-top: 56px;
+  margin-top: 48px;
 
   h2 {
     margin-bottom: 20px;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 800;
   }
 }
@@ -661,7 +661,7 @@ main {
 .card.repo {
   h3 {
     font-family: var(--mono);
-    font-size: 17px;
+    font-size: 15px;
   }
 
   dl {
@@ -673,7 +673,7 @@ main {
   dt {
     margin-top: 8px;
     color: var(--muted);
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 600;
     letter-spacing: 0.06em;
     text-transform: uppercase;
@@ -685,7 +685,7 @@ main {
 
   dd {
     margin: 0;
-    font-size: 15px;
+    font-size: 14px;
   }
 }
 
@@ -722,7 +722,7 @@ main {
   border: 1px dashed var(--border);
   border-radius: var(--radius);
   color: var(--muted);
-  font-size: 15px;
+  font-size: 14px;
 
   .source-links + & {
     margin-top: 16px;

@@ -23,7 +23,7 @@
   --mono: ui-monospace, 'Cascadia Code', Consolas, monospace;
 
   color-scheme: light;
-  font: 16px/1.65 var(--sans);
+  font: 15px/1.65 var(--sans);
   color: var(--text);
   background: var(--bg);
   font-synthesis: none;
