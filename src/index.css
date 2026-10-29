@@ -1,0 +1,113 @@
+:root {
+  --dark: #070709;
+  --mid: #333d40;
+  --light: #f0f0f0;
+
+  --bg: var(--light);
+  --bg-soft: color-mix(in srgb, var(--mid) 7%, var(--light));
+  --surface: var(--light);
+  --text: var(--mid);
+  --text-h: var(--dark);
+  --muted: color-mix(in srgb, var(--mid) 80%, var(--light));
+  --border: color-mix(in srgb, var(--mid) 20%, var(--light));
+  --accent: var(--mid);
+  --accent-hover: var(--dark);
+  --accent-soft: color-mix(in srgb, var(--mid) 12%, transparent);
+  --on-accent: var(--light);
+  --shadow: 0 1px 2px rgba(7, 7, 9, 0.05), 0 12px 32px rgba(7, 7, 9, 0.1);
+
+  --radius: 14px;
+  --container: 1080px;
+  --nav-h: 64px;
+  --sans: 'Plus Jakarta Sans', system-ui, 'Segoe UI', Roboto, sans-serif;
+  --mono: ui-monospace, 'Cascadia Code', Consolas, monospace;
+
+  color-scheme: light;
+  font: 16px/1.65 var(--sans);
+  color: var(--text);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root[data-theme='dark'] {
+  --bg: var(--dark);
+  --bg-soft: color-mix(in srgb, var(--mid) 20%, var(--dark));
+  --surface: color-mix(in srgb, var(--mid) 35%, var(--dark));
+  --text: color-mix(in srgb, var(--light) 75%, var(--mid));
+  --text-h: var(--light);
+  --muted: color-mix(in srgb, var(--light) 55%, var(--mid));
+  --border: var(--mid);
+  --accent: var(--light);
+  --accent-hover: color-mix(in srgb, var(--light) 80%, var(--mid));
+  --accent-soft: color-mix(in srgb, var(--mid) 75%, transparent);
+  --on-accent: var(--dark);
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 12px 32px rgba(0, 0, 0, 0.5);
+
+  color-scheme: dark;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-padding-top: var(--nav-h);
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100svh;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  color: var(--text-h);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: 20px;
+}
