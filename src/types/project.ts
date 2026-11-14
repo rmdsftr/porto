@@ -1,3 +1,5 @@
+export type ProjectStatus = 'On Going' | 'On Maintenance' | 'Finished'
+
 export type Repo = {
   name: string
   tech: string[]
@@ -19,5 +21,6 @@ export type Project = {
   title: string
   description: string
   tags: string[]
+  status?: ProjectStatus
   detail?: ProjectDetail
 }

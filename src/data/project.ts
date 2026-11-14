@@ -18,6 +18,7 @@ export const projects: Project[] = [
       'Docker',
       'VPS',
     ],
+    status: 'On Maintenance',
     detail: {
       appName: 'ENVIROO',
       overview:
@@ -64,6 +65,7 @@ export const projects: Project[] = [
     description:
       "Developed an internal web and desktop application for corporate PC registration, automating hardware specification scanning and integrating digital registration forms with the company's internal database.",
     tags: ['Express.js', 'SQL Server', 'MySQL', 'Python'],
+    status: 'Finished',
     detail: {
       overview:
         'An internal web and desktop application for automated corporate PC registration, developed during an internship at PT Denso Indonesia.',
@@ -96,6 +98,7 @@ export const projects: Project[] = [
     description:
       'Developed a web-based attendance management system with real-time attendance recording through location-restricted QR code verification and streamlined attendance management for internship participants.',
     tags: ['Express.js', 'MySQL'],
+    status: 'Finished',
     detail: {
       overview:
         'A web-based attendance management system for internship participants, developed during an internship at BAPPEDA Sumatera Barat.',

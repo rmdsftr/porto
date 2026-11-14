@@ -42,10 +42,10 @@ export const profile: Profile = {
 
   experiences: [
     {
-      title: 'Software Engineer (Project-Based, Remote)',
-      place: 'PSLH, Andalas University',
+      title: 'Software Engineer (Project-Based)',
+      place: 'Andalas University',
       period: 'Jan 2026 — now',
-      description: 'Built a waste bank management system consisting of a Flutter mobile app, a React web application, and a Go backend, supporting two-tier (BSM–Customer) and three-tier (BSI–BSU–Customer) operational models.',
+      description: 'Built a waste bank management system and currently building an employee income and tax management application with a team.',
     },
     {
       title: 'IT Intern',

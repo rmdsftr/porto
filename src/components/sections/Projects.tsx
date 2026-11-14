@@ -1,5 +1,6 @@
 import { Link } from 'react-router'
 import Icon from '../Icon'
+import ProjectStatusBadge from '../ProjectStatus'
 import Section from '../Section'
 import { projects } from '../../data/project'
 
@@ -13,7 +14,10 @@ export default function Projects() {
       <div className="projects">
         {projects.map((project) => (
           <article key={project.slug} className="card project">
-            <h3>{project.title}</h3>
+            <div className="project-head">
+              <h3>{project.title}</h3>
+              {project.status && <ProjectStatusBadge status={project.status} />}
+            </div>
             <p>{project.description}</p>
             <ul className="tags">
               {project.tags.map((tag) => (

@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { Link, useParams } from 'react-router'
 import Icon from '../components/Icon'
 import ImageSlider from '../components/ImageSlider'
+import ProjectStatusBadge from '../components/ProjectStatus'
 import NotFound from './not-found'
 import { projects } from '../data/project'
 
@@ -34,7 +35,10 @@ export default function ProjectPage() {
         </Link>
 
         <header className="project-header">
-          <p className="section-eyebrow">Project</p>
+          <div className="project-eyebrow-row">
+            <p className="section-eyebrow">Project</p>
+            {project.status && <ProjectStatusBadge status={project.status} />}
+          </div>
           <h1>{project.title}</h1>
           {detail.appName && (
             <p className="project-app">
