@@ -431,6 +431,13 @@ main {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 48px;
+  align-items: start;
+}
+
+.journey-column {
+  display: grid;
+  gap: 40px;
+  align-content: start;
 }
 
 .journey-title {

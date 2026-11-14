@@ -22,10 +22,15 @@ function Timeline({ title, items }: { title: string; items: TimelineItem[] }) {
 
 export default function Experience() {
   return (
-    <Section eyebrow="Journey" title="Experience & Education">
+    <Section eyebrow="Journey" title="Experience, Education & Organization">
       <div className="journey">
         <Timeline title="Experience" items={profile.experiences} />
-        <Timeline title="Education" items={profile.education} />
+        <div className="journey-column">
+          <Timeline title="Education" items={profile.education} />
+          {profile.organizations && profile.organizations.length > 0 && (
+            <Timeline title="Organization" items={profile.organizations} />
+          )}
+        </div>
       </div>
     </Section>
   )

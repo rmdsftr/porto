@@ -39,5 +39,6 @@ export type Profile = {
   exploring?: string[]
   experiences: TimelineItem[]
   education: TimelineItem[]
+  organizations?: TimelineItem[]
   contactText: string
 }

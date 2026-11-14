@@ -65,9 +65,27 @@ export const profile: Profile = {
     {
       title: "Bachelor of Information Systems",
       place: 'Andalas University',
-      period: '2022 — 2026',
+      period: 'Aug 2022 — Oct 2026',
       description:
-        'GPA 3.78/4.00. Thesis: Development of a Mobile and Web-Based Waste Bank Information System Using a Two-Level Hierarchical Model at the Integrated Waste Processing Center of Universitas Andalas.',
+        'GPA 3.78/4.00',
+    },
+  ],
+
+  organizations: [
+    {
+      title: 'Research & Development Coordinator',
+      place: 'Laboratory of IT Governance and Infrastructure',
+      period: '2026',
+    },
+    {
+      title: 'Research & Development Coordinator',
+      place: 'Fundamental Computing Laboratory',
+      period: '2025',
+    },
+    {
+      title: 'Secretary General & Treasurer',
+      place: 'Information Systems Student Association',
+      period: '2023 — 2025',
     },
   ],
 
