@@ -30,7 +30,12 @@ function Timeline({ title, items, className }: TimelineProps) {
 
 export default function Experience() {
   return (
-    <Section eyebrow="II · Journey" title="Liner Notes" subtitle="Experience, Education & Organization">
+    <Section
+      eyebrow="II · Journey"
+      title="Liner Notes"
+      subtitle="Experience, Education & Organization"
+      className="textured"
+    >
       <div className="journey">
         <Timeline title="Experience" items={profile.experiences} />
         <div className="journey-column">

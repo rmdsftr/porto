@@ -7,7 +7,7 @@ export default function Hero() {
   const { status } = profile
 
   return (
-    <section id="about" className="hero">
+    <section id="about" className="hero textured">
       <div className="container">
         <div className="hero-copy">
           <p className="section-eyebrow">About me</p>

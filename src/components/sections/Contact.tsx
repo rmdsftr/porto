@@ -5,7 +5,7 @@ import { profile } from '../../data/profile'
 
 export default function Contact() {
   return (
-    <Section eyebrow="IV · Contact — Encore" title="Let's work together" className="contact">
+    <Section eyebrow="IV · Contact — Encore" title="Let's work together" className="contact textured">
       <p className="contact-text">{profile.contactText}</p>
       <div className="actions">
         <a href={`mailto:${profile.email}`} className="btn btn-primary btn-lg">
