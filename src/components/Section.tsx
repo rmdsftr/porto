@@ -3,13 +3,13 @@ import type { ReactNode } from 'react'
 type SectionProps = {
   eyebrow: string
   title: string
-  alt?: boolean
+  subtitle?: string
   className?: string
   children: ReactNode
 }
 
-export default function Section({ eyebrow, title, alt, className, children }: SectionProps) {
-  const classes = ['section', alt && 'section-alt', className].filter(Boolean).join(' ')
+export default function Section({ eyebrow, title, subtitle, className, children }: SectionProps) {
+  const classes = ['section', className].filter(Boolean).join(' ')
 
   return (
     <section className={classes}>
@@ -17,6 +17,7 @@ export default function Section({ eyebrow, title, alt, className, children }: Se
         <header className="section-head">
           <p className="section-eyebrow">{eyebrow}</p>
           <h2 className="section-title">{title}</h2>
+          {subtitle && <p className="section-subtitle">{subtitle}</p>}
         </header>
         {children}
       </div>

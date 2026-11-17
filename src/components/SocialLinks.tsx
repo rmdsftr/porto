@@ -1,10 +1,16 @@
-import Icon from './Icon'
+import Icon, { type IconName } from './Icon'
 import { profile } from '../data/profile'
 
-export default function SocialLinks() {
+type SocialLinksProps = {
+  exclude?: IconName[]
+}
+
+export default function SocialLinks({ exclude = [] }: SocialLinksProps) {
+  const socials = profile.socials.filter((social) => !exclude.includes(social.icon))
+
   return (
     <ul className="socials">
-      {profile.socials.map((social) => (
+      {socials.map((social) => (
         <li key={social.label}>
           <a
             href={social.url}
@@ -14,7 +20,7 @@ export default function SocialLinks() {
             aria-label={social.label}
             title={social.label}
           >
-            <Icon name={social.icon} size={18} />
+            <Icon name={social.icon} size={19} strokeWidth={1.5} />
           </a>
         </li>
       ))}

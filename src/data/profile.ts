@@ -8,6 +8,8 @@ export const profile: Profile = {
   name: 'Ramadhani Safitri',
   nickname: 'Rani',
   role: 'Software Engineer',
+  focus: 'Backend Development',
+  alsoHandles: 'Also handles mobile & web',
   tagline:
     'I build reliable and maintainable applications with multi-tier and layered architectures, MVC, and MVVM. I work across backend, mobile, and web development using Go, Node.js, Flutter, and React',
   location: 'Pekanbaru, Riau, Indonesia (open to relocation)',
@@ -91,4 +93,10 @@ export const profile: Profile = {
 
   contactText:
     "Have a project, a job opportunity, or just want to say hi? Send me a message and I'll get back to you as soon as I can.",
+
+  themeSong: {
+    title: 'Missing',
+    artist: 'Evanescence',
+    spotifyUri: 'spotify:track:1kvuT0SqjPAUUqQJW4bxjo',
+  },
 }

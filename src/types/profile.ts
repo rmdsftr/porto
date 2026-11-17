@@ -24,10 +24,18 @@ export type TimelineItem = {
   description?: string
 }
 
+export type ThemeSong = {
+  title: string
+  artist: string
+  spotifyUri: string
+}
+
 export type Profile = {
   name: string
   nickname: string
   role: string
+  focus?: string
+  alsoHandles?: string
   tagline: string
   location: string
   photo: string
@@ -41,4 +49,5 @@ export type Profile = {
   education: TimelineItem[]
   organizations?: TimelineItem[]
   contactText: string
+  themeSong?: ThemeSong
 }

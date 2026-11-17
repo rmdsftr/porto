@@ -6,12 +6,10 @@ import { profile } from '../data/profile'
 const links = [
   { href: '#about', label: 'About' },
   { href: '#skills', label: 'Skills' },
-  { href: '#experience', label: 'Experience' },
+  { href: '#journey', label: 'Journey' },
   { href: '#projects', label: 'Projects' },
   { href: '#contact', label: 'Contact' },
 ]
-
-type Theme = 'light' | 'dark'
 
 type SectionLinkProps = Omit<ComponentPropsWithoutRef<'a'>, 'href'> & {
   hash: string
@@ -25,23 +23,13 @@ function SectionLink({ hash, onLanding, ...props }: SectionLinkProps) {
 export default function Navbar() {
   const onLanding = useLocation().pathname === '/'
   const [menuOpen, setMenuOpen] = useState(false)
-  const [theme, setTheme] = useState<Theme>(() =>
-    document.documentElement.dataset.theme === 'dark' ? 'dark' : 'light',
-  )
-
-  function toggleTheme() {
-    const next = theme === 'dark' ? 'light' : 'dark'
-    document.documentElement.dataset.theme = next
-    localStorage.setItem('theme', next)
-    setTheme(next)
-  }
 
   return (
     <header className="navbar">
       <nav className="container" aria-label="Main navigation">
         <SectionLink hash="#about" onLanding={onLanding} className="brand" onClick={() => setMenuOpen(false)}>
+          <span className="diamond" aria-hidden="true" />
           {profile.nickname}
-          <span>.</span>
         </SectionLink>
 
         <ul id="nav-links" className={menuOpen ? 'nav-links open' : 'nav-links'}>
@@ -54,26 +42,16 @@ export default function Navbar() {
           ))}
         </ul>
 
-        <div className="nav-actions">
-          <button
-            type="button"
-            className="icon-btn"
-            onClick={toggleTheme}
-            aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
-          >
-            <Icon name={theme === 'dark' ? 'sun' : 'moon'} size={18} />
-          </button>
-          <button
-            type="button"
-            className="icon-btn menu-btn"
-            onClick={() => setMenuOpen((open) => !open)}
-            aria-label="Menu"
-            aria-controls="nav-links"
-            aria-expanded={menuOpen}
-          >
-            <Icon name={menuOpen ? 'close' : 'menu'} size={18} />
-          </button>
-        </div>
+        <button
+          type="button"
+          className="icon-btn menu-btn"
+          onClick={() => setMenuOpen((open) => !open)}
+          aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+          aria-controls="nav-links"
+          aria-expanded={menuOpen}
+        >
+          <Icon name={menuOpen ? 'close' : 'menu'} size={20} />
+        </button>
       </nav>
     </header>
   )

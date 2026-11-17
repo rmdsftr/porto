@@ -1,5 +1,6 @@
 import { lazy, useEffect } from 'react'
 import Hero from '../components/sections/Hero'
+import Divider from '../components/Divider'
 import LazySection from '../components/LazySection'
 
 const Skills = lazy(() => import('../components/sections/Skills'))
@@ -17,8 +18,11 @@ export default function Landing() {
   return (
     <>
       <Hero />
+      <Divider />
       <LazySection id="skills" component={Skills} />
-      <LazySection id="experience" component={Experience} />
+      <Divider />
+      <LazySection id="journey" component={Experience} />
+      <Divider />
       <LazySection id="projects" component={Projects} />
       <LazySection id="contact" component={Contact} />
     </>
