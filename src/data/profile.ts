@@ -32,7 +32,7 @@ export const profile: Profile = {
       category: 'Backend',
       items: ['Go (Gin)', 'Node.js (NestJS, Express.js)', 'REST API Development'],
     },
-    { category: 'Databases', items: ['PostgreSQL', 'MySQL', 'Microsoft SQL Server'] },
+    { category: 'Databases', items: ['PostgreSQL', 'MySQL', 'Microsoft SQL Server', 'Redis'] },
     {
       category: 'Tools',
       items: ['Git', 'Docker', 'VPS (Linux)', 'Postman', 'Cloudflare', 'Figma'],
