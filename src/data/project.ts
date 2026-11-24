@@ -27,7 +27,7 @@ export const projects: Project[] = [
       repos: [
         {
           name: 'enviroo-backend',
-          tech: ['Go (Gin)', 'PostgreSQL', 'Cloudflare R2', 'FCM', 'Docker'],
+          tech: ['Go (Gin)', 'PostgreSQL', 'Cloudflare R2', 'FCM', 'Redis', 'Docker'],
           architecture:
             'Layered architecture that separates HTTP handling, business logic, and data access (handler → service → repository), with an adapter layer that decouples external service integrations from the core domain.',
           url: 'https://github.com/rmdsftr/enviroo-be',
