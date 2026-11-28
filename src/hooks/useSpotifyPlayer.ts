@@ -1,7 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 
-// Minimal types for the Spotify iFrame API:
-// https://developer.spotify.com/documentation/embeds/references/iframe-api
 type PlaybackUpdate = {
   data: {
     isPaused: boolean
@@ -61,14 +59,11 @@ function loadSpotifyIframeApi() {
   return apiPromise
 }
 
-// "spotify:track:<id>" -> "https://open.spotify.com/track/<id>"
 export function spotifyUrl(uri: string) {
   const [, type, id] = uri.split(':')
   return `https://open.spotify.com/${type}/${id}`
 }
 
-// Runs `callback` once the page has loaded and the browser is idle, so the
-// embed doesn't compete with first paint. Returns a cancel function.
 function afterLoadIdle(callback: () => void) {
   let idleId: number | undefined
   let timeoutId: number | undefined
@@ -101,7 +96,6 @@ export function useSpotifyPlayer(uri: string) {
   const repeatRef = useRef(true)
   const endedRef = useRef(false)
   const playingRef = useRef(false)
-  // restart() also starts playback, so a skip while paused is deferred to the next play.
   const pendingRestartRef = useRef(false)
 
   const [playback, setPlayback] = useState<Playback>({ ready: false, playing: false, position: 0, duration: 0 })
@@ -112,8 +106,6 @@ export function useSpotifyPlayer(uri: string) {
     if (!wrapper) return
 
     let cancelled = false
-    // createController replaces its target with an iframe, so give it a node
-    // React doesn't own.
     const target = document.createElement('div')
     wrapper.appendChild(target)
 
@@ -130,8 +122,6 @@ export function useSpotifyPlayer(uri: string) {
 
             controller.addListener('ready', () => setPlayback((p) => ({ ...p, ready: true })))
 
-            // Spotify reports about once a second. When a track (or the 30s
-            // preview) ends it reports position === duration without pausing.
             controller.addListener('playback_update', ({ data }) => {
               const ended = data.duration > 0 && data.position >= data.duration
               const playing = !data.isPaused && !ended
@@ -144,7 +134,6 @@ export function useSpotifyPlayer(uri: string) {
           })
         })
         .catch(() => {
-          // Spotify is blocked or offline: the controls stay disabled.
         })
     })
 

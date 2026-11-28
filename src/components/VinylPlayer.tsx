@@ -41,7 +41,6 @@ export default function VinylPlayer({ song, photo, photoAlt }: VinylPlayerProps)
       </div>
 
       <div className="player-controls">
-        {/* Single track: shuffle and next have nothing to do, so they stay disabled. */}
         <button type="button" className="player-btn player-toggle" aria-label="Shuffle" disabled>
           <Icon name="shuffle" size={22} strokeWidth={1.8} />
         </button>
@@ -78,7 +77,6 @@ export default function VinylPlayer({ song, photo, photoAlt }: VinylPlayerProps)
         <span className="player-credit-label">Now playing</span> {song.title} by {song.artist}
       </a>
 
-      {/* Spotify's embed does the actual playback; it stays mounted but invisible. */}
       <div ref={hostRef} className="player-embed" inert />
     </div>
   )

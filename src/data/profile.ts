@@ -95,8 +95,8 @@ export const profile: Profile = {
     "Have a project, a job opportunity, or just want to say hi? Send me a message and I'll get back to you as soon as I can.",
 
   themeSong: {
-    title: 'Missing',
+    title: 'Whisper',
     artist: 'Evanescence',
-    spotifyUri: 'spotify:track:1kvuT0SqjPAUUqQJW4bxjo',
+    spotifyUri: 'spotify:track:1TU3KOnNwSERgNbF2Yzl7N',
   },
 }

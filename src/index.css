@@ -122,7 +122,6 @@ ol {
   }
 }
 
-/* Irregular dips, like a candle flame; used on the crimson glows. */
 @keyframes flicker {
   0%,
   100% {
